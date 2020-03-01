@@ -1,27 +1,55 @@
-.text.sel_item_content {
+/*******************************************/
+/* Layout
+/*******************************************/
+.section_day .task_item_details {
+  padding: 7px 0;
+}
+.section_day .text.sel_item_content {
   display: flex;
 }
-
-/* ラベル 左寄せ */
-.task_item_details_bottom {
-  margin-top: 0 !important;
-  min-width: max-content;
+.section_day .task_item_details_bottom {
   order: 1;
 }
-/* ラベル 幅統一 */
-.label {
-  min-width: 25px;
-  text-align: center;
-}
 /* タスク名 */
-.task_item_content_text {
+.section_day .task_item_content_text {
   order: 2;
 }
 
+/*******************************************/
+/* Hidden
+/*******************************************/
+
+/* 繰り返しマークの非表示 */
+.section_day .date.date_today {
+  display: none;
+}
+/* コメント 非表示 */
+.section_day .task_item_details_bottom .note_icon {
+  display: none !important;
+}
+/* 関係ないラベルの非表示 */
+.section_day
+  .task_item_details_bottom
+  > a:not([onclick*="分"]):not([onclick*="時間"]):not([onclick*="不明"]) {
+  display: none;
+}
+
+/*******************************************/
+/* label
+/*******************************************/
+.section_day .task_item_details_bottom {
+  margin-top: 0 !important;
+  min-width: max-content;
+}
+/* ラベル 幅統一 */
+.section_day .label {
+  min-width: 25px;
+  text-align: center;
+}
 /* ラベル 装飾 (工数) */
-.task_item_details_bottom > a[onclick*="分"],
-.task_item_details_bottom > a[onclick*="時間"],
-.task_item_details_bottom > a[onclick*="不明"] {
+.section_day .task_item_details_bottom > a[onclick*="分"],
+.section_day .task_item_details_bottom > a[onclick*="時間"],
+.section_day .task_item_details_bottom > a[onclick*="不明"] {
   font-size: 75%;
   opacity: 0.75;
   border-radius: 5px;
@@ -31,52 +59,32 @@
   margin-right: 5px !important;
 }
 
-.time-divider {
+/*******************************************/
+/* time-divider
+/*******************************************/
+.section_day .time-divider {
   font-weight: bold;
   margin: 18px 0 6px !important;
-  margin-left: 180px;
-  width: 100%;
-  display: block;
 }
 
-.time-divider.task_item_details {
+.section_day .time-divider.task_item_details {
   border-bottom: 2px dotted rgba(0, 0, 0, 0.3);
 }
 
 /* Checkboxの透明度アップ */
-.time-divider .sel_checkbox_td {
+.section_day .time-divider .sel_checkbox_td {
   opacity: 0.2;
 }
 
 /* プロジェクト名とhoverアクションの非表示 */
-.time-divider + .task_item_actions {
+.section_day .time-divider + .task_item_actions {
   display: none;
 }
 
 /* タスク名の中央寄せ */
-.time-divider .content.task_content_item {
+.section_day .time-divider .content.task_content_item {
   padding-right: 72px;
 }
-.time-divider .text.sel_item_content {
+.section_day .time-divider .text.sel_item_content {
   justify-content: center;
-}
-
-/*******************************************
-/* 非表示系
-/*******************************************
-
-/* 繰り返しラベル 非表示 */
-.task_item_details_bottom .td_due_date {
-  display: none !important;
-}
-
-/* コメント 非表示 */
-.task_item_details_bottom .note_icon {
-  display: none !important;
-}
-
-/* 関係ないラベルの非表示 */
-.task_item_details_bottom
-  > a:not([onclick*="分"]):not([onclick*="時間"]):not([onclick*="不明"]) {
-  display: none;
 }
