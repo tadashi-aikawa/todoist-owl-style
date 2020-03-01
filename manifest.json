@@ -1,0 +1,12 @@
+{
+  "name": "todoist-owl-style",
+  "version": "1.0",
+  "description": "Adapt Owl Style to Todoist",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://todoist.com/app*"],
+      "css": ["style.css"]
+    }
+  ]
+}

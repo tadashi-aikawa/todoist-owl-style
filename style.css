@@ -1,0 +1,52 @@
+.text.sel_item_content {
+  display: flex;
+}
+
+/* ラベル 左寄せ */
+.task_item_details_bottom {
+  margin-top: 0 !important;
+  min-width: max-content;
+  order: 1;
+}
+/* タスク名 */
+.task_item_content_text {
+  order: 2;
+}
+
+/* ラベル 装飾 (工数) */
+.task_item_details_bottom > a[onclick*="分"],
+.task_item_details_bottom > a[onclick*="時間"] {
+  font-size: 75%;
+  opacity: 0.75;
+  border-radius: 5px;
+  border-style: outset;
+  border-width: 1px;
+  padding: 1px 5px 1px 5px;
+  margin-right: 5px !important;
+}
+
+/* ラベル 装飾 (時間) */
+.task_item_details_bottom > a[onclick*="*****"] {
+  font-size: 0;
+  margin-left: 180px;
+}
+
+/*******************************************
+/* 非表示系
+/*******************************************
+
+/* 繰り返しラベル 非表示 */
+.task_item_details_bottom .td_due_date {
+  display: none !important;
+}
+
+/* コメント 非表示 */
+.task_item_details_bottom .note_icon {
+  display: none !important;
+}
+
+/* 関係ないラベルの非表示 */
+.task_item_details_bottom
+  > a:not([onclick*="分"]):not([onclick*="時間"]):not([onclick*="*****"]) {
+  display: none;
+}
