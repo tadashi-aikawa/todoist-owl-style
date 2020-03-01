@@ -7,6 +7,8 @@ function styleTimeDivider() {
   });
 }
 
+window.onhashchange = styleTimeDivider;
+
 (new MutationObserver(styleTimeDivider)).observe(
   document.getElementById("editor"),
   { childList: true }
