@@ -30,6 +30,25 @@
   font-size: 0;
   margin-left: 180px;
 }
+.time-divider {
+  font-weight: bold;
+  margin: 18px 0 6px !important;
+  width: 100%;
+  display: block;
+}
+
+.time-divider.task_item_details {
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.3);
+}
+
+/* Checkboxの透明度アップ */
+.time-divider .sel_checkbox_td {
+  opacity: 0.2;
+}
+/* プロジェクト名とhoverアクションの非表示 */
+.time-divider + .task_item_actions {
+  display: none;
+}
 
 /*******************************************
 /* 非表示系
