@@ -8,6 +8,11 @@
   min-width: max-content;
   order: 1;
 }
+/* ラベル 幅統一 */
+.label {
+  min-width: 25px;
+  text-align: center;
+}
 /* タスク名 */
 .task_item_content_text {
   order: 2;
@@ -15,7 +20,8 @@
 
 /* ラベル 装飾 (工数) */
 .task_item_details_bottom > a[onclick*="分"],
-.task_item_details_bottom > a[onclick*="時間"] {
+.task_item_details_bottom > a[onclick*="時間"],
+.task_item_details_bottom > a[onclick*="不明"] {
   font-size: 75%;
   opacity: 0.75;
   border-radius: 5px;
@@ -25,14 +31,10 @@
   margin-right: 5px !important;
 }
 
-/* ラベル 装飾 (時間) */
-.task_item_details_bottom > a[onclick*="*****"] {
-  font-size: 0;
-  margin-left: 180px;
-}
 .time-divider {
   font-weight: bold;
   margin: 18px 0 6px !important;
+  margin-left: 180px;
   width: 100%;
   display: block;
 }
@@ -45,9 +47,18 @@
 .time-divider .sel_checkbox_td {
   opacity: 0.2;
 }
+
 /* プロジェクト名とhoverアクションの非表示 */
 .time-divider + .task_item_actions {
   display: none;
+}
+
+/* タスク名の中央寄せ */
+.time-divider .content.task_content_item {
+  padding-right: 72px;
+}
+.time-divider .text.sel_item_content {
+  justify-content: center;
 }
 
 /*******************************************
@@ -66,6 +77,6 @@
 
 /* 関係ないラベルの非表示 */
 .task_item_details_bottom
-  > a:not([onclick*="分"]):not([onclick*="時間"]):not([onclick*="*****"]) {
+  > a:not([onclick*="分"]):not([onclick*="時間"]):not([onclick*="不明"]) {
   display: none;
 }
