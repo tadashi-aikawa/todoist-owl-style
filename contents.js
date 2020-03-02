@@ -18,12 +18,18 @@ function styleTimeDivider(mutationRecords) {
   });
 }
 
+// クエリだけ変わったとき用
+(new MutationObserver(styleTimeDivider)).observe(
+  document.querySelector("#content"),
+  { childList: true }
+);
+
+// その他の変更検知
 function setObserver() {
   (new MutationObserver(styleTimeDivider)).observe(
     document.querySelector("#editor"),
     { childList: true }
   );
 }
-
 window.onhashchange = setObserver;
 setObserver();
