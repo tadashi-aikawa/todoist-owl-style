@@ -2,7 +2,8 @@ function inSelectorAny(task, selectors) {
   return selectors.some(s => !!task.querySelector(s));
 }
 
-function styleTimeDivider() {
+function styleTimeDivider(mutationRecords) {
+  console.debug("todoist-owl-style: fire");
   const tasks = document.querySelectorAll(".task_item_details");
   tasks.forEach(task => {
     if (inSelectorAny(task, [
@@ -17,9 +18,12 @@ function styleTimeDivider() {
   });
 }
 
-window.onhashchange = styleTimeDivider;
+function setObserver() {
+  (new MutationObserver(styleTimeDivider)).observe(
+    document.querySelector("#editor"),
+    { childList: true }
+  );
+}
 
-(new MutationObserver(styleTimeDivider)).observe(
-  document.getElementById("editor"),
-  { childList: true }
-);
+window.onhashchange = setObserver;
+setObserver();
