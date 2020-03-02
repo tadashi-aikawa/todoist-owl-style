@@ -3,6 +3,7 @@ function inSelectorAny(task, selectors) {
 }
 
 function styleTimeDivider() {
+  console.log("todoist-owl-style: fire");
   const tasks = document.querySelectorAll(".task_item_details");
   tasks.forEach(task => {
     if (inSelectorAny(task, [
@@ -20,6 +21,6 @@ function styleTimeDivider() {
 window.onhashchange = styleTimeDivider;
 
 (new MutationObserver(styleTimeDivider)).observe(
-  document.getElementById("editor"),
+  document.body,
   { childList: true }
 );
