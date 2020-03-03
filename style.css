@@ -88,3 +88,23 @@
 .section_day .time-divider .text.sel_item_content {
   justify-content: center;
 }
+
+/*******************************************/
+/* calendar-task
+/*******************************************/
+
+.calendar-task {
+  animation: flash 2s linear infinite;
+}
+
+@keyframes flash {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  50% {
+    background-color: rgba(255, 0, 0, 0.1);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}

@@ -15,6 +15,11 @@ function styleTimeDivider(mutationRecords) {
     ])) {
       task.classList.add("time-divider");
     }
+    if (inSelectorAny(task, [
+      '* img[alt="📆"]'
+    ])) {
+      task.classList.add("calendar-task");
+    }
   });
 }
 
