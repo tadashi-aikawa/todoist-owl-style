@@ -2,14 +2,14 @@
 
 Adapt Owl Style to Todoist
 
-<div style="display: flex">
+<div style="display: flex;">
   <div style="padding: 10px;">
     <div style="font-size: 20px; font-weight: bold;">Before</div>
-    <img src="https://dl.dropboxusercontent.com/s/6k25eeamp2fc5m4/20200302_3.png" />
+    <img src="https://dl.dropboxusercontent.com/s/6k25eeamp2fc5m4/20200302_3.png" width="45%"/>
   </div>
   <div style="padding: 10px;">
     <div style="font-size: 20px; font-weight: bold;">After</div>
-    <img src="https://dl.dropboxusercontent.com/s/45v0wph1m5ic46i/20200302_5.png" />
+    <img src="https://dl.dropboxusercontent.com/s/45v0wph1m5ic46i/20200302_5.png" width="45%"/>
   </div>
 </div>
 
