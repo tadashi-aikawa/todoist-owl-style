@@ -1,6 +1,10 @@
 /*******************************************/
 /* Layout
 /*******************************************/
+.day_list {
+  max-width: 600px;
+}
+
 .section_day .task_item_details {
   padding: 7px 0;
 }
@@ -13,6 +17,10 @@
 /* タスク名 */
 .section_day .task_item_content_text {
   order: 2;
+}
+/* プロジェクト名は消す */
+.section_day .task_item_details_bottom .project_item {
+  display: none; !important;
 }
 
 /*******************************************/
