@@ -11,13 +11,12 @@ function styleTimeDivider() {
         '* img[alt="⏲"]',
         '* img[alt="🌅"]',
         '* img[alt="🏢"]',
-        '* img[alt="🍙"]',
         '* img[alt="🏠"]'
       ])
     ) {
       task.classList.add("time-divider");
     }
-    if (inSelectorAny(task, ['* img[alt="📆"]'])) {
+    if (inSelectorAny(task, ['* img[alt="📅"]'])) {
       task.classList.add("calendar-task");
     }
   });
